@@ -1,9 +1,11 @@
+import br.com.alura.screenmatch.models.Movie;
+
 public class Main {
     public static void main(String[] args) {
         Movie newMovie = new Movie();
-        newMovie.name = "O Poderoso Chefão";
-        newMovie.releaseYear = 1972;
-        newMovie.durationMinutes = 175;
+        newMovie.setName("O Poderoso Chefão");
+        newMovie.setReleaseYear(1972);
+        newMovie.setDurationMinutes(175);
 
         newMovie.showData();
 
