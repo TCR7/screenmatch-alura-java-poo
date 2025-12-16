@@ -11,8 +11,7 @@ public class Main {
         newMovie.review(9.0);
         newMovie.review(5);
 
-        System.out.println(newMovie.ratingSums);
-        System.out.println(newMovie.totalReviews);
-        System.out.println(newMovie.avarageRating());
+        System.out.println("Total de avaliações: " + newMovie.getTotalReviews());
+        System.out.println("Média: " + newMovie.avarageRating());
     }
 }
