@@ -24,10 +24,6 @@ public class Movie {
         return includedInSubscription;
     }
 
-    public double getRatingSums() {
-        return ratingSums;
-    }
-
     public int getDurationMinutes() {
         return durationMinutes;
     }
