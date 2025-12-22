@@ -20,7 +20,9 @@ public class Main {
         Serie serie = new Serie();
         serie.setName("Breaking Bad");
         serie.setReleaseYear(2008);
-        serie.setDurationMinutes(50);
-        serie.showData();
+        serie.setMinutesPerEpisode(50);
+        serie.setSeasons(5);
+        serie.setEpisodesPerSeason(7);
+        System.out.println("Duração para maratonar Breaking Bad: " + serie.getDurationMinutes() + " minutos");
     }
 }
