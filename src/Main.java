@@ -1,4 +1,5 @@
 import br.com.alura.screenmatch.models.Movie;
+import br.com.alura.screenmatch.models.Serie;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,5 +16,11 @@ public class Main {
 
         System.out.println("Total de avaliações: " + newMovie.getTotalReviews());
         System.out.println("Média: " + newMovie.avarageRating());
+
+        Serie serie = new Serie();
+        serie.setName("Breaking Bad");
+        serie.setReleaseYear(2008);
+        serie.setDurationMinutes(50);
+        serie.showData();
     }
 }
