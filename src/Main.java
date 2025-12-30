@@ -1,3 +1,4 @@
+import br.com.alura.screenmatch.calculations.TimeCalculation;
 import br.com.alura.screenmatch.models.Movie;
 import br.com.alura.screenmatch.models.Serie;
 
@@ -24,5 +25,17 @@ public class Main {
         serie.setSeasons(5);
         serie.setEpisodesPerSeason(7);
         System.out.println("Duração para maratonar Breaking Bad: " + serie.getDurationMinutes() + " minutos");
+
+        Movie otherMovie = new Movie();
+        otherMovie.setName("Matrix");
+        otherMovie.setDurationMinutes(136);
+        otherMovie.setReleaseYear(1999);
+
+
+        TimeCalculation calculator = new TimeCalculation();
+        calculator.includeTime(newMovie);
+        calculator.includeTime(otherMovie);
+        calculator.includeTime(serie);
+        System.out.println("Tempo total de filmes: " + calculator.getTotalTime() + " minutos");
     }
 }
