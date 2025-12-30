@@ -15,6 +15,6 @@ public class Movie extends Title implements Rate {
 
     @Override
     public int getRating() {
-        return 0;
+        return (int) avarageRating() / 2;
     }
 }

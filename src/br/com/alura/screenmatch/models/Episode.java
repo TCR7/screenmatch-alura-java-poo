@@ -1,9 +1,12 @@
 package br.com.alura.screenmatch.models;
 
-public class Episode {
+import br.com.alura.screenmatch.calculations.Rate;
+
+public class Episode implements Rate {
     private int number;
     private String name;
     private Serie serie;
+    private int totalViews;
 
     public int getNumber() {
         return number;
@@ -27,5 +30,22 @@ public class Episode {
 
     public void setSerie(Serie serie) {
         this.serie = serie;
+    }
+
+    public int getTotalViews() {
+        return totalViews;
+    }
+
+    public void setTotalViews(int totalViews) {
+        this.totalViews = totalViews;
+    }
+
+    @Override
+    public int getRating() {
+        if (totalViews > 100) {
+            return 4;
+        } else {
+            return 2;
+        }
     }
 }

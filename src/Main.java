@@ -1,4 +1,6 @@
+import br.com.alura.screenmatch.calculations.FilterRating;
 import br.com.alura.screenmatch.calculations.TimeCalculation;
+import br.com.alura.screenmatch.models.Episode;
 import br.com.alura.screenmatch.models.Movie;
 import br.com.alura.screenmatch.models.Serie;
 
@@ -37,5 +39,14 @@ public class Main {
         calculator.includeTime(otherMovie);
         calculator.includeTime(serie);
         System.out.println("Tempo total de filmes: " + calculator.getTotalTime() + " minutos");
+
+        FilterRating filterRating = new FilterRating();
+        filterRating.filter(newMovie);
+
+        Episode episode = new Episode();
+        episode.setNumber(1);
+        episode.setSerie(serie);
+        episode.setTotalViews(300);
+        filterRating.filter(episode);
     }
 }
