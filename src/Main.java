@@ -4,10 +4,11 @@ import br.com.alura.screenmatch.models.Episode;
 import br.com.alura.screenmatch.models.Movie;
 import br.com.alura.screenmatch.models.Serie;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        Movie newMovie = new Movie();
-        newMovie.setName("O Poderoso Chefão");
+        Movie newMovie = new Movie("O Poderoso Chefão");
         newMovie.setReleaseYear(1972);
         newMovie.setDurationMinutes(175);
 
@@ -28,8 +29,7 @@ public class Main {
         serie.setEpisodesPerSeason(7);
         System.out.println("Duração para maratonar Breaking Bad: " + serie.getDurationMinutes() + " minutos");
 
-        Movie otherMovie = new Movie();
-        otherMovie.setName("Matrix");
+        Movie otherMovie = new Movie("Matrix");
         otherMovie.setDurationMinutes(136);
         otherMovie.setReleaseYear(1999);
 
@@ -48,5 +48,18 @@ public class Main {
         episode.setSerie(serie);
         episode.setTotalViews(300);
         filterRating.filter(episode);
+
+        Movie anotherMovie = new Movie("John Wick");
+        anotherMovie.setReleaseYear(2014);
+        anotherMovie.setDurationMinutes(101);
+        anotherMovie.review(8);
+
+        ArrayList<Movie> movieList = new ArrayList<>();
+        movieList.add(anotherMovie);
+        movieList.add(otherMovie);
+        movieList.add(newMovie);
+        System.out.println("Quantidade de filmes: " + movieList.size());
+        System.out.println("Primeiro filme: " + movieList.get(0).getName());
+        System.out.println("lista de filmes: " + movieList.toString());
     }
 }
