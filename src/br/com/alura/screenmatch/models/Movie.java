@@ -5,8 +5,9 @@ import br.com.alura.screenmatch.calculations.Rate;
 public class Movie extends Title implements Rate {
     private String director;
 
-    public Movie(String name) {
-        this.setName(name);
+    public Movie(String name, int releaseYear) {
+        super(name, releaseYear);
+//        this.setName(name);
     }
 
     public String getDirector() {
